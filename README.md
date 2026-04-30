@@ -1,3 +1,6 @@
+# Sentinel Pathway Website
+
+This is an organized static website build from the single-file Sentinel Pathway HTML.
 
 ## Folder structure
 
@@ -28,5 +31,16 @@ sentinel-pathway-organized-final/
       daily.js
   docs/
     hosting-guide.md
+    domain-ideas.md
 ```
 
+## Preview locally
+
+Open `index.html` directly in your browser, or use VS Code Live Server for the cleanest local preview.
+
+## Deploy
+
+This is a static website. It can be hosted on Cloudflare Pages, Netlify, Vercel, GitHub Pages, or any normal static web host.
+
+## Investigator logo asset
+The Investigator division logo is stored at `assets/images/investigator-logo.webp` and is used on the Investigators page as a resized visual seal.

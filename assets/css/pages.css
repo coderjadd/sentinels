@@ -1,0 +1,827 @@
+/* ============================================================
+     HOME · cinematic but quiet
+     Single hero, single intro section, single onboarding entry
+     ============================================================ */
+
+  .hero-page {
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 50%;
+    right: -3rem;
+    transform: translateY(-50%);
+    width: min(540px, 55vw);
+    aspect-ratio: 1;
+    pointer-events: none;
+    opacity: 0.85;
+    z-index: -1;
+  }
+
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .hero-tag::before {
+    content: "";
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--gold);
+  }
+
+  h1.hero-title {
+    font-family: var(--display);
+    font-size: clamp(3rem, 7.5vw, 6rem);
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    max-width: 14ch;
+    margin-bottom: 1.5rem;
+  }
+  h1.hero-title em {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .hero-tagline {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    color: var(--gold);
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+  }
+
+  .hero-lede {
+    font-size: 1.18rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 580px;
+    margin-bottom: 2.25rem;
+  }
+
+  /* "What this is" section — three short paragraphs, no cards */
+  .what-is {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .what-is .label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  .what-is h2 {
+    font-family: var(--display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--ink);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    font-variation-settings: 'opsz' 96;
+  }
+  .what-is h2 em { color: var(--gold); font-style: italic; }
+
+  .what-is .three-up {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem 2rem;
+    margin: 0 auto 3rem;
+  }
+  .what-is .three-up > div {
+    text-align: left;
+  }
+  .what-is .three-up h3 {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .what-is .three-up p {
+    font-size: 0.97rem;
+    color: var(--ink-dim);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* Single onboarding entry — text-driven, no panel */
+  .onboard-entry {
+    max-width: 620px;
+    margin: 5rem auto 0;
+    text-align: center;
+    padding-top: 4rem;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .onboard-entry .label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .onboard-entry h2 {
+    font-family: var(--display);
+    font-size: clamp(1.6rem, 2.6vw, 2rem);
+    color: var(--ink);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .onboard-entry p {
+    color: var(--ink-2);
+    margin-bottom: 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .onboard-entry .btns {
+    display: flex;
+    gap: 0.85rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ============================================================
+     ORDER · prose-driven page · disciplines as inline display
+     ============================================================ */
+
+  .disciplines-prose {
+    margin: 2rem 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem 2.5rem;
+  }
+  .disciplines-prose > div {
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+  }
+  .disciplines-prose .glyph {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .disciplines-prose h4 {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .disciplines-prose p {
+    font-size: 0.97rem;
+    color: var(--ink-dim);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ============================================================
+     PATH · vertical record
+     ============================================================ */
+
+  .path-list {
+    margin: 2rem 0;
+  }
+  .tier-block { margin: 3rem 0 1rem; }
+  .tier-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .tier-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .rank-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: start;
+  }
+  .rank-row:last-child { border-bottom: none; }
+  .rank-id {
+    font-family: var(--display);
+    font-size: 2.4rem;
+    color: var(--gold);
+    font-weight: 500;
+    line-height: 1;
+    font-variation-settings: 'opsz' 144;
+    font-style: italic;
+  }
+  .rank-name {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  .rank-tag {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink-dim);
+    font-size: 1.02rem;
+    margin-bottom: 0.85rem;
+  }
+  .rank-req ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .rank-req li {
+    padding: 0.25rem 0 0.25rem 1.4rem;
+    position: relative;
+    color: var(--ink-dim);
+    font-size: 0.97rem;
+  }
+  .rank-req li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  /* ============================================================
+     TRAININGS · prose + a few highlighted disciplines
+     ============================================================ */
+
+  .training-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem 2.5rem;
+    margin: 2rem 0;
+  }
+  .training-three > div {
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+  }
+  .training-three .ttype {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .training-three h4 {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .training-three .tline {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .training-three p {
+    font-size: 0.97rem;
+    color: var(--ink-dim);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ============================================================
+     COMMAND · vertical entries, no boxes
+     ============================================================ */
+
+  .hicom-list {
+    margin: 2.5rem 0;
+  }
+  .hicom-row {
+    padding: 2rem 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .hicom-row:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .hicom-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .hicom-name {
+    font-family: var(--display);
+    font-size: 1.6rem;
+    color: var(--ink);
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: -0.005em;
+  }
+  .hicom-holder {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .hicom-row p { color: var(--ink-2); font-size: 1rem; margin: 0; }
+
+  /* ============================================================
+     INVESTIGATORS · two-pillar, real content
+     ============================================================ */
+
+  .invest-quote {
+    margin: 2.5rem 0 3rem;
+    font-family: var(--display);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.4;
+    text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+  }
+  .invest-quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  .invest-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin: 2rem 0;
+    align-items: start;
+  }
+  .invest-col h4 {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-style: italic;
+    border-top: 1px solid var(--rule);
+    padding-top: 0.85rem;
+  }
+  .invest-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+  }
+  .invest-col li {
+    padding: 0.4rem 0 0.4rem 1.3rem;
+    position: relative;
+    color: var(--ink-2);
+    font-size: 1rem;
+  }
+  .invest-col li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  .invest-ways {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .invest-way {
+    padding: 1.75rem 1.5rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    background: var(--bg-soft);
+    transition: all 0.25s var(--ease);
+  }
+  .invest-way:hover {
+    border-color: var(--gold);
+    background: var(--bg-mid);
+  }
+  .invest-way .way-num {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.85rem;
+  }
+  .invest-way h4 {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+  }
+  .invest-way p {
+    font-size: 0.97rem;
+    color: var(--ink-dim);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  /* ============================================================
+     CHARTER · numbered code, typewritten feel
+     ============================================================ */
+
+  .charter-list {
+    list-style: none;
+    counter-reset: charter;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .charter-list li {
+    counter-increment: charter;
+    padding: 1.6rem 0 1.6rem 4.5rem;
+    position: relative;
+    border-top: 1px solid var(--rule-soft);
+    color: var(--ink-2);
+  }
+  .charter-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .charter-list li::before {
+    content: counter(charter, upper-roman) ".";
+    position: absolute;
+    left: 0;
+    top: 1.6rem;
+    font-family: var(--display);
+    color: var(--gold);
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    font-style: italic;
+    width: 3.5rem;
+  }
+  .charter-list li strong {
+    color: var(--ink);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-style: italic;
+    letter-spacing: -0.005em;
+  }
+
+  /* ============================================================
+     HONOR · roll of honor, milestone redesign
+     ============================================================ */
+
+  .honor-summary {
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .honor-summary > div {
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    border-left: 1px solid var(--rule-soft);
+  }
+  .honor-summary > div:first-child { border-left: none; }
+  .honor-summary .v {
+    font-family: var(--display);
+    font-size: 2.4rem;
+    color: var(--gold);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 0.35rem;
+    font-variation-settings: 'opsz' 144;
+  }
+  .honor-summary .l {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
+  .earn-list {
+    margin: 2rem 0;
+    list-style: none;
+    padding: 0;
+    counter-reset: earn;
+  }
+  .earn-list li {
+    counter-increment: earn;
+    padding: 1.5rem 0 1.5rem 3.5rem;
+    border-top: 1px solid var(--rule-soft);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .earn-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .earn-list li::before {
+    content: counter(earn, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  .earn-list .earn-name {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+  .earn-list .earn-name span {
+    display: block;
+    color: var(--ink-faint);
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+    font-style: italic;
+  }
+  .earn-list .earn-bounty {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* The roll of honor — milestones redesigned */
+  .roll {
+    margin: 2.5rem 0;
+  }
+  .roll-row {
+    display: grid;
+    grid-template-columns: 70px 1fr auto;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding: 1.4rem 0;
+    border-top: 1px dashed var(--rule-soft);
+    transition: background 0.2s var(--ease);
+  }
+  .roll-row:last-child { border-bottom: 1px dashed var(--rule-soft); }
+  .roll-row:hover .roll-num { color: var(--ink); }
+  .roll-num {
+    font-family: var(--display);
+    font-size: 2.6rem;
+    color: var(--gold);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1;
+    text-align: right;
+    font-variation-settings: 'opsz' 144;
+    transition: color 0.2s var(--ease);
+  }
+  .roll-num small {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .roll-name {
+    font-family: var(--display);
+    font-size: 1.6rem;
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    line-height: 1.2;
+  }
+  .roll-bonus {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Shop — single line with a button */
+  .shop-line {
+    margin: 3rem 0 0;
+    padding: 2rem 0;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  .shop-line h4 {
+    font-family: var(--display);
+    color: var(--ink);
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .shop-line p {
+    color: var(--ink-dim);
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  /* ============================================================
+     OATH · single still page
+     ============================================================ */
+
+  .oath-page {
+    text-align: center;
+    padding: 6rem 2.5rem;
+  }
+  .oath-page .filecode { margin-bottom: 2.5rem; }
+  .oath-page h1.title { margin-bottom: 0.75rem; }
+  .oath-page .lede { margin-left: auto; margin-right: auto; }
+
+  .oath-block {
+    margin: 4rem auto 1rem;
+    max-width: 560px;
+  }
+  .oath-line {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0.4rem 0;
+    font-weight: 400;
+  }
+  .oath-line strong {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .oath-break { height: 1.25rem; }
+  .oath-foot {
+    margin-top: 3rem;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.32em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+  }
+
+  /* ============================================================
+     ONBOARDING · numbered steps, quiet
+     ============================================================ */
+
+  .steps-list {
+    counter-reset: step;
+    margin: 2rem 0;
+    list-style: none;
+    padding: 0;
+  }
+  .steps-list li {
+    counter-increment: step;
+    padding: 1.75rem 0 1.75rem 4.5rem;
+    position: relative;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .steps-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .steps-list li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.75rem;
+    font-family: var(--display);
+    font-size: 1.4rem;
+    color: var(--gold);
+    font-weight: 500;
+    font-style: italic;
+    width: 3.5rem;
+    font-variation-settings: 'opsz' 144;
+  }
+  .steps-list h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
+    font-family: var(--display);
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .steps-list p { margin: 0; color: var(--ink-dim); }
+
+  /* ============================================================
+     VOICES · quieter, single panel
+     ============================================================ */
+
+  .voice-quote {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.5;
+    text-align: center;
+    max-width: 640px;
+    margin: 3rem auto;
+    font-weight: 400;
+  }
+  .voice-quote cite {
+    display: block;
+    margin-top: 1.25rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ============================================================
+     DAILY · keep the bordered display, but quieter
+     ============================================================ */
+
+  .daily-frame {
+    margin: 2.5rem 0;
+    padding: 0;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+  }
+  .daily-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+  .daily-head .label { color: var(--gold); font-weight: 600; }
+  .daily-head .date { color: var(--ink-dim); }
+  .daily-body {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  .daily-kind {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    color: var(--gold-2);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  .daily-text {
+    font-family: var(--display);
+    font-size: 1.55rem;
+    line-height: 1.5;
+    color: var(--ink);
+    font-style: italic;
+    max-width: 620px;
+    margin: 0 auto;
+    font-weight: 400;
+  }

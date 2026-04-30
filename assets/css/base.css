@@ -1,0 +1,68 @@
+/* Sentinel Pathway design system */
+
+  :root {
+    --bg:      #0d0c08;
+    --bg-soft: #15130d;
+    --bg-mid:  #1c1a13;
+    --panel:   #14120c;
+
+    --ink:       #f6ecd2;
+    --ink-2:     #d8cfb4;
+    --ink-dim:   #9d957f;
+    --ink-faint: #6b6451;
+
+    --gold:      #f5c842;
+    --gold-2:    #e3a91e;
+    --gold-deep: #a87a09;
+    --gold-soft: rgba(245, 200, 66, 0.10);
+    --gold-glow: rgba(245, 200, 66, 0.30);
+    --rule:      rgba(245, 200, 66, 0.22);
+    --rule-soft: rgba(245, 200, 66, 0.08);
+
+    --serif:   'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+    --display: 'Fraunces', 'Cinzel', serif;
+    --mono:    'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+    --r-sm: 6px;
+    --r-md: 12px;
+    --r-lg: 18px;
+    --r-pill: 999px;
+
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Quiet atmospheric ground — just one soft top-left bloom */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(ellipse 70% 50% at 8% 0%, rgba(245, 200, 66, 0.08) 0%, transparent 55%);
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.22;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.98 0 0 0 0 0.94 0 0 0 0 0.85 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .frame { position: relative; z-index: 2; }
